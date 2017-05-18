@@ -114,5 +114,19 @@ namespace wpftesting
                 return dt;
             }
         }
+
+        public MySqlDataReader Select2(string query)
+        {
+            if(this.IsConnect())
+            {
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                MySqlDataReader returnVal = cmd.ExecuteReader();
+                return returnVal;
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
 }

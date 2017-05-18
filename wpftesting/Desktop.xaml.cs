@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -41,14 +42,17 @@ namespace wpftesting
 
         private void CheckIfAdmin()
         {
-            DataTable dt = dbh.Select("SELECT rights FROM tbl_users WHERE username='" + username + "' AND rights >= 10", "isAdmin");
-            if (dt.Rows.Count > 0)
+            MySqlDataReader reader = dbh.Select2("SELECT * FROM tbl_users WHERE rights > 9 AND username = '" + username + "'");
+            if(reader != null)
             {
-                btnAdmin.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                btnAdmin = null;
+                if (reader.HasRows)
+                {
+                    btnAdmin.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    btnAdmin.Visibility = Visibility.Hidden;
+                }
             }
         }
 
