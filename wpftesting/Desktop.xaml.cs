@@ -42,17 +42,10 @@ namespace wpftesting
 
         private void CheckIfAdmin()
         {
-            MySqlDataReader reader = dbh.Select2("SELECT * FROM tbl_users WHERE rights > 9 AND username = '" + username + "'");
-            if(reader != null)
+            DataTable dt = dbh.Select("SELECT rights FROM tbl_users WHERE username='" + username + "' AND rights >= 10", "isAdmin");
+            if (dt.Rows.Count > 0)
             {
-                if (reader.HasRows)
-                {
-                    btnAdmin.Visibility = Visibility.Visible;
-                }
-                else
-                {
-                    btnAdmin.Visibility = Visibility.Hidden;
-                }
+                btnAdmin.Visibility = Visibility.Visible;
             }
         }
 
@@ -81,5 +74,23 @@ namespace wpftesting
         {
 
         }
+
+        private void btnBrowser_Click(object sender, RoutedEventArgs e)
+        {
+            Browser br = new Browser();
+            br.Show();
+        }
     }
 }
+
+            MySqlDataReader reader = dbh.Select2("SELECT * FROM tbl_users WHERE rights > 9 AND username = '" + username + "'");
+            if(reader != null)
+            {
+                if (reader.HasRows)
+                {
+                    btnAdmin.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    btnAdmin.Visibility = Visibility.Hidden;
+                }

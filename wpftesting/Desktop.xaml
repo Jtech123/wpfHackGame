@@ -19,6 +19,7 @@
                 <Grid Background="#FFE5E5E5">
                     <Button x:Name="btnShutDown" Content="Shut Down" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="80" Click="btnShutDown_Click"/>
                     <Button x:Name="btnAdmin" Content="Admin Panel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Click="btnAdmin_Click"/>
+                    <Button x:Name="btnBrowser" Content="Browser" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="80" Margin="78,0,0,0" Click="btnBrowser_Click"/>
 
                 </Grid>
             </Expander>
