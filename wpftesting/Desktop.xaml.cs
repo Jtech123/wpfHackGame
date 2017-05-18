@@ -77,5 +77,11 @@ namespace wpftesting
         {
 
         }
+
+        private void btnBrowser_Click(object sender, RoutedEventArgs e)
+        {
+            Browser br = new Browser();
+            br.Show();
+        }
     }
 }
