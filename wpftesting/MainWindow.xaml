@@ -13,7 +13,7 @@
                 <GradientStop Color="#FF636363" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Label x:Name="lblTitle" Content="Login" VerticalAlignment="Top" VerticalContentAlignment="Center"  FontSize="18" Width="91" Height="39" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Label x:Name="lblTitle" Content="Login" VerticalAlignment="Top" VerticalContentAlignment="Center"  FontSize="20" Width="91" Height="39" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Rockwell" FontWeight="Bold"/>
         <Grid x:Name="grdLoginForm" Margin="61,61,61,61">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -21,13 +21,13 @@
                     <GradientStop Color="White" Offset="1"/>
                 </LinearGradientBrush>
             </Grid.Background>
-            <Label x:Name="lblUsername" Content="Username:" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Width="100" Height="50" VerticalContentAlignment="Center" VerticalAlignment="Top"/>
+            <Label x:Name="lblUsername" Content="Username:" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Width="100" Height="50" VerticalContentAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Rockwell" FontSize="13"/>
             <TextBox x:Name="txtUsername" HorizontalContentAlignment="Left" TextWrapping="Wrap" Text="" Height="30
                      " VerticalContentAlignment="Center" VerticalAlignment="Top" Margin="138,12,9.4,0"/>
-            <Label x:Name="lblPassword" Content="Password:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,55,0,0" HorizontalContentAlignment="Left" Width="100" Height="50" VerticalContentAlignment="Center"/>
+            <Label x:Name="lblPassword" Content="Password:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,55,0,0" HorizontalContentAlignment="Left" Width="100" Height="50" VerticalContentAlignment="Center" FontFamily="Rockwell" FontSize="13" FontWeight="Bold"/>
             <PasswordBox x:Name="txtPassword" HorizontalContentAlignment="Left" Margin="138,67,10.4,0" Height="30
                          " VerticalAlignment="Top" VerticalContentAlignment="Center"/>
-            <Button x:Name="btnLogin" Content="Login" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="75" Click="btnLogin_Click"/>
+            <Button x:Name="btnLogin" Content="Login" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="75" Click="btnLogin_Click" FontFamily="Rockwell" FontSize="15" FontWeight="Bold"/>
 
         </Grid>
     </Grid>
