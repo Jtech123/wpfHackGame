@@ -41,8 +41,8 @@ namespace wpftesting
 
         private void CheckIfAdmin()
         {
-            DataTable dt = dbh.Select("SELECT rights FROM tbl_users WHERE username='" + username + "' AND rights >= 10", "isAdmin");
-            if (dt.Rows.Count > 0)
+            DataTable dt = dbh.Select("SELECT * FROM tbl_users WHERE username='" + username + "' AND rights >= 10", "isAdmin");
+            if (dt.Rows.Count == 1)
             {
                 btnAdmin.Visibility = Visibility.Visible;
             }
