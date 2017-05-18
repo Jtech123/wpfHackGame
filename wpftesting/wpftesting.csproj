@@ -177,6 +177,18 @@
     <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>mkdir "lib\dll"
+
+cd $(ProjectDir)
+
+copy /y "bin\debug\*.dll" "bin\debug\lib\dll"
+copy /y "bin\debug\CryptSharp.pdb" "bin\debug\lib\dll"
+copy /y "bin\debug\CryptSharp.xml" "bin\debug\lib\dll"
+del /Q "bin\debug\CryptSharp.pdb"
+del /Q "bin\debug\*.dll"
+del /Q "bin\debug\*.xml"</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
