@@ -17,8 +17,9 @@
         <Grid x:Name="grdLoginForm" Margin="61,61,61,61">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FFA4A4A4" Offset="0"/>
-                    <GradientStop Color="White" Offset="1"/>
+                    <GradientStop Color="#FFA4A4A4" Offset="1"/>
+                    <GradientStop Color="#FFB58888"/>
+                    <GradientStop Color="#FF766C6C" Offset="0.999999"/>
                 </LinearGradientBrush>
             </Grid.Background>
             <Label x:Name="lblUsername" Content="Username:" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Width="100" Height="50" VerticalContentAlignment="Center" VerticalAlignment="Top"/>
