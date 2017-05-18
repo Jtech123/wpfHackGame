@@ -1,0 +1,18 @@
+﻿<Window x:Class="wpftesting.MsgBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpftesting"
+        mc:Ignorable="d"
+        Title="MsgBox" Height="300" Width="300" Loaded="Window_Loaded" Closing="Window_Closing" WindowStyle="None" ResizeMode="NoResize" Topmost="True" BorderThickness="5" Background="#FF6F6F6F" BorderBrush="#FFABAFFF">
+    <Grid Background="#FFC7C7C7">
+
+
+        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Bottom" Width="133" Click="btnCancel_Click"/>
+        <Button x:Name="btnOk" Content="Ok" HorizontalAlignment="Right" Margin="10,10,10,10" VerticalAlignment="Bottom" Width="133" Click="btnOk_Click"/>
+        <Label x:Name="lblTitle" Content="ERROR" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,10,0,0" FontSize="16" FontFamily="Rockwell"/>
+        <TextBox x:Name="txtboxMessage" IsReadOnly="True" HorizontalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="222" Margin="10,44,10,34" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="280" IsReadOnlyCaretVisible="True" IsInactiveSelectionHighlightEnabled="True" BorderThickness="0" Background="#FFC7C7C7"/>
+
+    </Grid>
+</Window>
