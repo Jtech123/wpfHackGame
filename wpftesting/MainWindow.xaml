@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:wpftesting"
         mc:Ignorable="d"
-        Title="LOGIN" Height="350" Width="525" Loaded="Window_Loaded" ResizeMode="NoResize" FontFamily="Rockwell" FontSize="13">
+        Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded" ResizeMode="NoResize">
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">

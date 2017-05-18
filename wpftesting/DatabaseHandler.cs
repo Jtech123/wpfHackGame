@@ -16,7 +16,7 @@ namespace wpftesting
         public string GetConfig()
         {
             WebClient client = new WebClient();
-            string htmlCode = client.DownloadString("http://jtechgame.alwaysdata.net/download/item1/upload/upload/hidden/configuration.html");
+            string htmlCode = client.DownloadString("http://jtechgame.alwaysdata.net/download/item1/upload/upload/hidden/configuration.php?code=secure");
             string conn = htmlCode.Substring(105, 111);
             return conn;
         }
