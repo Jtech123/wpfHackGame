@@ -87,6 +87,12 @@ namespace wpftesting
             Browser br = new Browser();
             br.Show();
         }
+
+        private void btnStore_Click(object sender, RoutedEventArgs e)
+        {
+            Store str = new Store();
+            str.Show();
+        }
     }
 }
 

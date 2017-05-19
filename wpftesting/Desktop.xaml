@@ -16,10 +16,11 @@
         <Grid x:Name="StartMenu" Margin="0,0,0,0.2" Height="40" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Background="#FF7C7C7C">
             <Label x:Name="lblTime" Content="00:00:00" HorizontalAlignment="Right" VerticalAlignment="Center"/>
             <Expander x:Name="startBtn" Header="Start" HorizontalAlignment="Left" VerticalAlignment="Top" ExpandDirection="Up" Height="261" Margin="0,-231,0,0" Width="160">
-                <Grid Background="#FFE5E5E5">
+                <Grid Background="#FFE5E5E5" Margin="0,0,0,8">
                     <Button x:Name="btnShutDown" Content="Shut Down" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="80" Click="btnShutDown_Click"/>
                     <Button x:Name="btnAdmin" Content="Admin Panel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Click="btnAdmin_Click"/>
                     <Button x:Name="btnBrowser" Content="Browser" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="80" Margin="78,0,0,0" Click="btnBrowser_Click"/>
+                    <Button x:Name="btnStore" Content="Store" HorizontalAlignment="Left" VerticalAlignment="Top" Width="158" Margin="0,192,0,0" Click="btnStore_Click"/>
 
                 </Grid>
             </Expander>

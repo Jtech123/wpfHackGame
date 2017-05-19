@@ -5,8 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:wpftesting"
         mc:Ignorable="d"
-        Title="Store" Height="300" Width="300">
+        Title="Store" Height="348.38" Width="545.37">
     <Grid>
-        
+        <ListView x:Name="lvUsers" HorizontalAlignment="Left" Height="318" VerticalAlignment="Top" Width="539">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" Width="120" DisplayMemberBinding="{Binding Name}">
+                    </GridViewColumn>
+                    <GridViewColumn Header="Categorie" Width="120" DisplayMemberBinding="{Binding Categorie}">
+                    </GridViewColumn>
+                    <GridViewColumn Header="Price" Width="60" DisplayMemberBinding="{Binding Price}">
+                    </GridViewColumn>
+                    <GridViewColumn Header="Sold" Width="60" DisplayMemberBinding="{Binding Sold}">
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
     </Grid>
 </Window>
