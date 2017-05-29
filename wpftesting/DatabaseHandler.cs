@@ -58,8 +58,8 @@ namespace wpftesting
             {
                 //if (String.IsNullOrEmpty(databaseName))
                     //result = false;
-                //string connstring = string.Format("Server=mysql-jtechgame.alwaysdata.net; database={0}; UID=jtechgame_helper; password=wvw8buLnmmEVEq7y", databaseName);
-                connection = new MySqlConnection(GetConfig());
+                string connstring = string.Format("Server=localhost:1234; database=jtechgame_hack; UID=root; password=");
+                connection = new MySqlConnection(connstring);
                 if(Connection == null || connection.State == ConnectionState.Closed)
                     connection.Open();
                 result = true;
@@ -74,8 +74,8 @@ namespace wpftesting
             {
                 if (Connection != null)
                 {
-                    //string connstring = string.Format("Server=mysql-jtechgame.alwaysdata.net; database={0}; UID=jtechgame_helper; password=wvw8buLnmmEVEq7y", databaseName);
-                    connection = new MySqlConnection(GetConfig());
+                    string connstring = string.Format("Server=localhost; database=jtechgame_hack; UID=root; password=");
+                    connection = new MySqlConnection(connstring);
                     if (Connection == null || connection.State == ConnectionState.Closed)
                         connection.Open();
                 }

@@ -84,6 +84,7 @@ namespace wpftesting
                     }
                     reader.Close();
                 }
+                
             }
             catch (Exception ex)
             {
@@ -107,7 +108,8 @@ namespace wpftesting
             }
             catch
             {
-                dbh.ResetConn();
+                //dbh.ResetConn();
+                Desktop dt = new Desktop(txtUsername.Text);
             }
         }
 

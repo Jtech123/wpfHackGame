@@ -104,6 +104,7 @@
     <Compile Include="CodingTool.xaml.cs">
       <DependentUpon>CodingTool.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Software.cs" />
     <Compile Include="Store.xaml.cs">
       <DependentUpon>Store.xaml</DependentUpon>
     </Compile>

@@ -19,14 +19,19 @@ namespace wpftesting
     /// </summary>
     public partial class Store : Window
     {
+        MsgHandler msgHandler;
+        
         public Store()
         {
+            this.msgHandler = new MsgHandler();
             InitializeComponent();
             List<User> items = new List<User>();
+            List<Software> items2 = new List<Software>();
             items.Add(new User() { Name = "John Doe", Age = 42, Mail = "john@doe-family.com" });
             items.Add(new User() { Name = "Jane Doe", Age = 39, Mail = "jane@doe-family.com" });
             items.Add(new User() { Name = "Sammy Doe", Age = 7, Mail = "sammy.doe@gmail.com" });
-            lvUsers.ItemsSource = items;
+            items2.Add(new Software() { Name = "test", Price = 10, Sold = 2, Made_By = "Jtech" });
+            lvUsers.ItemsSource = items2;
         }
 
         public class User
@@ -36,6 +41,13 @@ namespace wpftesting
             public int Age { get; set; }
 
             public string Mail { get; set; }
+        }
+
+        
+
+        private void lvUsers_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            msgHandler.CreateMessage("test", lvUsers.Items.CurrentItem.ToString());
         }
     }
 }
